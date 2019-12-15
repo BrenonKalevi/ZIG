@@ -21,7 +21,7 @@ Servo myservo;
 Servo myservo2;
 char leitor;
 int pos = 0;
-
+int tq = 8;
 long FISHFEEDER = 3600000;
 long endtime;
 long now;
@@ -65,21 +65,21 @@ void loop()
         case 'a':
           for (pos = 0; pos < 180; pos += 1) {
             myservo.write(pos);
-            delay(15);
+            delay(tq);
           }
           for (pos = 180; pos >= 0; pos -= 1) {
             myservo.write(pos);
-            delay(15);
+            delay(tq);
           }
           break;
         case 's':
           for (pos = 0; pos < 180; pos += 1) {
             myservo2.write(pos);
-            delay(15);
+            delay(tq);
           }
           for (pos = 180; pos >= 1; pos -= 1) {
             myservo2.write(pos);
-            delay(15);
+            delay(tq);
           }
           break;
       }
@@ -90,20 +90,20 @@ void loop()
 
   for (pos = 0; pos < 180; pos += 1) {
     myservo.write(pos);
-    delay(15);
+    delay(tq);
   }
   for (pos = 180; pos >= 1; pos -= 1) {
     myservo.write(pos);
-    delay(15);
+    delay(tq);
   }
 
   for (pos = 0; pos < 180; pos += 1) {
     myservo2.write(pos);
-    delay(15);
+    delay(tq);
   }
   for (pos = 180; pos >= 1; pos -= 1) {
     myservo2.write(pos);
-    delay(15);
+    delay(tq);
   }
 
   
